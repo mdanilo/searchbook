@@ -1,0 +1,139 @@
+:root {
+    --mobile: 810px;
+    --font: 'Quicksand', sans-serif;
+}
+
+body {
+    font-family: var(--font);
+    background-color: #f9f9f9;
+}
+
+.container {
+    width: 100%;
+    margin: 0 auto;
+    padding: 0 15px;
+    max-width: 1170px;
+}
+
+.search .row_1 {
+    background-color: #fff;
+    border-bottom: 1px solid #dcdcdc;
+}
+
+@media (min-width: 810px) {
+    .search .row_1 form {
+        width: 50%;
+    }
+}
+
+.search .row_1 form {
+    margin: 0 auto 10px;
+}
+
+.search .row_1 form div {
+    height: 30px;
+    display: flex;
+    flex-direction: row;
+}
+
+.search .row_1 form input {
+    height: 100%;
+    border: none;
+}
+
+.search .row_1 form input[type="text"] {
+    width: 80%;
+}
+
+.search .row_1 form input[type="submit"] {
+    width: 20%;
+    cursor: pointer;
+}
+
+/*LIST*/
+.search .row_2 ul {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5px 15px;
+}
+
+.search .row_2 ul li {
+    width: calc(100% / 4 - 50px);
+    height: auto;
+    padding: 20px;
+    margin: 5px;
+    border-radius: 3px;
+    background-color: #fff;
+}
+
+@media (max-width: 810px) {
+    .search .row_2 ul li{
+        width: 100%;
+    }
+}
+
+.search .row_2 ul li .image figure {
+    height: 220px;
+    display: flex;
+    position: relative;
+    align-items: center;
+    justify-content: center;
+}
+
+.search .row_2 ul li .image figure img {
+    z-index: 1;
+    position: relative;
+}
+
+.search .row_2 ul li .image figure > div {
+    width: 100%;
+    height: 100%;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    filter: blur(1px);
+    -ms-filter: blur(1px);
+    -webkit-filter: blur(1px);
+    background-position: center;
+}
+
+.search .row_2 ul li .info .title {
+    font-size: 16px;
+    margin-top: 10px;
+    max-width: 25ch;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.search .row_2 ul li .info .author {
+    color: gray;
+    font-size: 12px;
+    margin: 7px 0;
+}
+
+.search .row_2 ul li .info .description {
+    height: 125px;
+    overflow: hidden;
+    margin-bottom: 15px;
+}
+
+.search .row_2 ul li .view {
+    width: auto;
+    color: #fff;
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    padding: 0 15px;
+    font-weight: bold;
+    border-radius: 3px;
+    text-align: center;
+    transition: opacity 300ms;
+    background-color: #039be5;
+}
+
+.search .row_2 ul li .view:hover {
+    opacity: 0.6;
+}
+/*LIST*/
